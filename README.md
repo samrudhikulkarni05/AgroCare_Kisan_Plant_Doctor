@@ -27,7 +27,7 @@ The system aligns with the HED 7.0 – Greenathon (Hack. Build. Sustain.) theme 
 ---
 
 ### Detailed Report
-https://github.com/samrudhikulkarni05/AgroCare_Greenathon_HED7/commit/ca2b6f507e96e4df2b48761de5c3405958142687
+AgroCare.pdf
 
 ### Key Features
 
