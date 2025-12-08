@@ -14,16 +14,30 @@ AgroCare is a multimodal, farmer-first AI assistant that helps prevent crop loss
 
 ---
 
-## 🌍 Why We Did Not Use a Database
+### AgroCare – Kisan Plant Doctor
 
-AgroCare is intentionally built *without* a traditional database to keep things simple, safe, and reliable for farmers.
+Smart, Eco-Friendly Crop Health Assistant for Farmers
 
-- *No accounts, no passwords, no complexity:* Farmers never have to sign up, remember credentials, or deal with “technical” issues like logins, OTPs, or failed sessions. The app is open and ready to use from the first click.  
-- *Fewer things that can break:* By avoiding a database, there is no risk of “DB down”, corrupted tables, or migration errors. This stateless style makes the system easier to run and more resilient in real-world conditions.
-- *Faster and lighter for rural infrastructure:* Without a database layer, the app needs fewer backend services, which helps keep hosting costs low and performance stable even on modest college/NGO infrastructure. 
-- *Privacy by design:* Farmer images, audio, and queries are processed in real time and are not permanently stored, which reduces the risk of data misuse and makes farmers more comfortable using the tool. 
+AgroCare is a simple, fast, and multilingual AI Plant Doctor that helps farmers instantly diagnose plant diseases and get safe, eco-friendly treatment steps. Built using React, TypeScript, Vite, and Google Gemini, it works on any device without login, accounts, or complexity.
 
-If required in future, a database can be plugged in for features like follow-up tracking or disease hotspot analytics, but the *current design is optimized to remove all technical friction for farmers* and make deployment as plug-and-play as possible for organizers.
+AgroCare focuses on sustainable farming, preventing chemical overuse, reducing crop loss, and giving farmers clear guidance in easy language. The interface is lightweight, mobile-friendly, and designed for low-bandwidth rural usage.
+
+The system aligns with the HED 7.0 – Greenathon (Hack. Build. Sustain.) theme by solving a real agricultural problem through accessible AI, promoting environmental care, and offering a scalable tool that can be embedded in community platforms, KVKs, NGOs, and rural apps.
+
+---
+### Key Features
+
+Instant Disease Detection — Upload a photo or type symptoms and get quick diagnosis.
+
+Multimodal Support — Works with text, voice, image, and video inputs.
+
+Regional Language Support — Get advice in Hindi, Marathi, Gujarati, Telugu, Tamil, and more.
+
+Farm-Safe Treatment Suggestions — Clear, safe, and step-by-step solutions.
+
+No Login Required — Open and use instantly.
+
+Farmer-Centric UI — Clean, simple, and distraction-free.
 
 ---
 
@@ -65,6 +79,10 @@ npm run dev
 npm run build
 npm run preview
 ```
+## Hackathon and HED 7.0 impact
+
+AgroCare is submitted under *Greenathon (HED 7.0 – Happy Eco Diwali 2K25)* as a tech‑driven, sustainability‑oriented solution for farmers.
+It demonstrates how AI, when designed to be inclusive and privacy‑aware, can help build a more eco‑friendly agriculture ecosystem and can be extended with features like image‑based disease detection, offline modes, and localized guides in future editions.
 
 
 ## 🌾 Using AgroCare
@@ -81,8 +99,8 @@ npm run preview
 | Member              | GitHub Profile                                                |
 |---------------------|---------------------------------------------------------------|
 | *Rutuja Raut*     | https://github.com/rutujaraut730                              |
-| *Samruddhi Kulkarni* | https://github.com/samrudhikulkarni05                     |
-| *Pramila Chandanshive* | https://github.com/PramilaChandanshive                 |
 | *Sakshi Tamshetti* | https://github.com/SakshiTamshetti                          |
+| *Pramila Chandanshive* | https://github.com/PramilaChandanshive                 |
+| *Samruddhi Kulkarni* | https://github.com/samrudhikulkarni05                     |
 
 *Built for HED 7.0 – Greenathon: Hack. Build. Sustain.* 🌱
