@@ -98,6 +98,15 @@ It demonstrates how AI, when designed to be inclusive and privacy‑aware, can h
 
 ---
 
+## Future Scope
+- *Offline capabilities*: Implement Progressive Web App (PWA) features for offline access and caching.
+- *Image-based disease detection*: Integrate machine learning models for automatic disease detection from images.
+- *Localized cropping guides*: Add region-specific crop information and advisory.
+- *Expert connection*: Integrate with expert networks for personalized guidance.
+- *Multilingual support expansion*: Add more Indian languages and dialects.
+- *Integration with government schemes*: Link with government initiatives and subsidies.
+- *Community features*: Add forums or Q&A sections for farmer interactions.
+
 ## 👥 Team AgroCare
 
 | Member              | GitHub Profile                                                |
