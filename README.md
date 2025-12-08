@@ -1,83 +1,89 @@
+# 🌿 AgroCare: Kisan Plant Doctor  
+### Zero-Barrier AI for Sustainable Farming
 
-# 🌿 AgroCare: Kisan Plant Doctor
+[![Tech Stack](https://img.shields.io/badge/stack-React%20%7C%20TypeScript%20%7C%20Vite-blue)](https://vitejs.dev/)
+[![AI](https://img.shields.io/badge/AI-Google%20Gemini-orange)](https://ai.google.dev/)
+[![Made for Farmers](https://img.shields.io/badge/focus-Farmer--First-success)](https://github.com/topics/agriculture)
+[![Hackathon](https://img.shields.io/badge/HED%207.0-Greenathon-brightgreen)](https://github.com/topics/hackathon)  
 
-**The Zero-Barrier, Multimodal AI Assistant for Instant Crop Health Diagnosis.**
+AgroCare is a multimodal, farmer-first AI assistant that helps prevent crop loss and chemical overuse by giving instant, safe, and localized plant health advice in regional languages — with no login, no app install, and support for low-end devices.
 
----
-
-## ✨ Tags
-
-![Technology](https://img.shields.io/badge/Tech-Gemini_API-blue.svg)
-![Frontend](https://img.shields.io/badge/Frontend-React%20%7C%20TypeScript-informational.svg)
-![Multimodality](https://img.shields.io/badge/Feature-Multimodal_AI-orange.svg)
-![Target](https://img.shields.io/badge/Target-Rural_Empowerment-green.svg)
-![Hackathon](https://img.shields.io/badge/Built%20For-Greenathon_HED7.0-purple.svg)
-
----
-
-AgroCare is a lightweight, multi-language AI assistant built on the Google Gemini API to empower farmers by instantly identifying plant diseases and delivering simple, safe, and clear treatment steps. It requires **zero login** and supports images, audio, video, and text inputs, ensuring maximum accessibility for all farmers, even on shared or low-end devices.
+<p align="center">
+  <img width="1354" height="550" alt="Screenshot 2025-12-08 125421" src="https://github.com/user-attachments/assets/3a98939f-2263-4eb1-84d3-3bc30e9ad8da" />
+</p>
 
 ---
 
-## 🚀 The Breakthrough: Instant, Accessible Diagnosis
+## 🌍 Why We Did Not Use a Database
 
-This project is solving the critical challenge of crop loss and chemical misuse in rural communities by delivering an AI tool that requires **zero technical literacy** and **zero bandwidth barrier**.
+AgroCare is intentionally built *without* a traditional database to keep things simple, safe, and reliable for farmers.
 
-| 🧩 The Challenge | 💡 AgroCare's Solution |
-| :--- | :--- |
-| **❌ Expert Scarcity:** Farmers lack instant access to plant health experts. | **✅ 24/7 AI Advisor:** Immediate, expert-level diagnosis powered by **Gemini**. |
-| **❌ Digital Barrier:** Complex apps, logins, passwords, and high-speed internet needed. | **✅ Zero-Barrier Access:** No accounts, no OTPs, minimal bandwidth required. |
-| **❌ Language/Literacy:** Advice is often inaccessible to rural users. | **✅ Regional Language Support:** Understands and responds in multiple **Indian languages**. |
-| **❌ Guesswork & Misuse:** Misidentification leads to crop loss and chemical misuse. | **✅ Safety-First Diagnosis:** Accurate multimodal analysis promotes eco-friendly treatment. |
+- *No accounts, no passwords, no complexity:* Farmers never have to sign up, remember credentials, or deal with “technical” issues like logins, OTPs, or failed sessions. The app is open and ready to use from the first click.  
+- *Fewer things that can break:* By avoiding a database, there is no risk of “DB down”, corrupted tables, or migration errors. This stateless style makes the system easier to run and more resilient in real-world conditions.[web:34][web:40]  
+- *Faster and lighter for rural infrastructure:* Without a database layer, the app needs fewer backend services, which helps keep hosting costs low and performance stable even on modest college/NGO infrastructure.[web:33]  
+- *Privacy by design:* Farmer images, audio, and queries are processed in real time and are not permanently stored, which reduces the risk of data misuse and makes farmers more comfortable using the tool.[web:36]  
 
----
-
-## 🧠 Core Technology: The Gemini Multimodal Advantage
-
-AgroCare operates as a sophisticated, safety-conscious advisory expert. We leveraged the **Google Gemini API** to process complex, real-world farmer inputs that simpler, single-modality models cannot handle.
-
-| Feature | Description | Gemini API Capability |
-| :--- | :--- | :--- |
-| **Quad-Input Recognition** | Accepts Text, Leaf Images, Audio Clips, and Short Videos from low-end devices. | **Multimodality:** Analyzes image, audio, and video streams simultaneously for diagnosis. |
-| **Contextual Confidence** | If quality is poor or symptoms are complex, the AI asks for clearer input. | **Safety & Reliability:** Agent is prompted to prioritize asking for detail over providing risky, uncertain advice. |
-| **Actionable Advice** | Converts complex diagnostic findings into simple, practical, and eco-friendly treatment steps. | **Instruction Following:** Generates structured, localized responses optimized for rural accessibility. |
+If required in future, a database can be plugged in for features like follow-up tracking or disease hotspot analytics, but the *current design is optimized to remove all technical friction for farmers* and make deployment as plug-and-play as possible for organizers.
 
 ---
 
-## 🛠️ Professional Tech Stack
+## 🛠 Tech Stack
 
-AgroCare is built for **performance, security, and maximum compatibility** across rural device types.
-
-| Component | Technology | Rationale for Use |
-| :--- | :--- | :--- |
-| **Frontend UI** | React + TypeScript ⚛️ | Component-based, type-safe, and scalable UI for rapid development. |
-| **Build Tool** | Vite ⚡ | Ultra-fast development server and efficient production bundling. |
-| **AI Engine** | **Google Gemini API** 🧠 | Powers all multimodal analysis, disease detection, and multi-language advisory logic. |
-| **UI Core** | HTML, CSS, JavaScript | Ensures simplicity and compatibility, serving as a lightweight fallback for low-spec devices. |
-| **Security** | `.env.local` 🔒 | Secure storage of the `GEMINI_API_KEY`, preventing credential exposure. |
+| Layer     | Technology                           | Why it was chosen |
+|----------|---------------------------------------|-------------------|
+| Frontend | React + TypeScript + Vite            | Fast HMR, type safety, and small bundles for slow rural networks.[web:41] |
+| AI Engine| Google Gemini API (@google/genai)  | Multimodal (image, audio, video, text) and multilingual capabilities for real farm contexts.[web:4] |
+| Styling  | HTML, CSS, lightweight JS            | Smooth performance on shared, low-RAM, or older devices. |
+| Config   | .env                               | Keeps API keys outside the codebase and simplifies environment-specific setups.[web:41] |
 
 ---
 
-## 🌍 Greenathon Impact & Vision
+## ⚙ Local Setup Instructions
 
-AgroCare directly contributes to the Greenathon goals (HED 7.0 Hack. Build. Sustain.) by focusing on the triple bottom line of sustainability:
+Follow these steps to run AgroCare locally.
+## ⚙ Local Setup
 
-*   **Environmental:** Reduces **Chemical Misuse** by ensuring the right treatment is applied, lowering reliance on broad-spectrum pesticides.
-*   **Economic:** Prevents **Avoidable Crop Loss**, protecting farmer livelihoods and improving yield security.
-*   **Social:** Promotes **Digital Inclusion** by eliminating technical barriers and language hurdles for underserved communities.
+### 1. Clone the repository
 
-**🎯 Vision:** To provide every farmer — regardless of literacy level, device type, or internet speed — with free, instant, and accessible plant health guidance powered by AI.
+bash
+git clone <your-repo-url>
+cd kisan-plant-doctor
+
+
+### 2. Install dependencies
+bash
+npm install
+
+### 3. Configure environment variables
+bash
+# .env
+API_KEY=YOUR_GEMINI_API_KEY_HERE
+
+### 4. Start the local dev server
+bash
+npm run dev
+
+### 5. Build for production
+bash
+npm run build
+npm run preview
+
+## 🌾 Using AgroCare
+
+- Upload or capture a photo/video of the affected plant.  
+- Add an optional text or audio description in your preferred language.  
+- The AI provides a diagnosis plus simple, farmer-friendly steps.  
+- You can follow the guidance directly, share it, or seek expert help based on the recommendations.
 
 ---
 
-## 👥 Team Details
+## 👥 Team AgroCare
 
-| Team Name: | *AgroCare * |
-| :--- | :--- |
-| Member | GitHub Link |
-| Rutuja Raut | [rutujaraut730](https://github.com/rutujaraut730) |
-| Samruddhi Kulkarni | [samrudhikulkarni05](https://github.com/samrudhikulkarni05?tab=repositories) |
-| Pramila Chandanshive | [PramilaChandanshive](https://github.com/PramilaChandanshive/PramilaChandanshive.git) |
-| Sakshi Tamshetti | [SakshiTamshetti](https://github.com/SakshiTamshetti) |
+| Member              | GitHub Profile                                                |
+|---------------------|---------------------------------------------------------------|
+| *Rutuja Raut*     | https://github.com/rutujaraut730                              |
+| *Samruddhi Kulkarni* | https://github.com/samrudhikulkarni05                     |
+| *Pramila Chandanshive* | https://github.com/PramilaChandanshive                 |
+| *Sakshi Tamshetti* | https://github.com/SakshiTamshetti                          |
 
-*Built with passion and commitment for HED 7.0 – Greenathon (Hack. Build. Sustain.)*
+*Built for HED 7.0 – Greenathon: Hack. Build. Sustain.* 🌱
