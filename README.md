@@ -41,32 +41,37 @@ If required in future, a database can be plugged in for features like follow-up 
 ## ⚙ Local Setup Instructions
 
 Follow these steps to run AgroCare locally.
-## ⚙ Local Setup
+## ⚙️ Local Setup Instructions
+
+Follow these steps to run AgroCare locally.
+## ⚙️ Local Setup
 
 ### 1. Clone the repository
 
-bash
+```bash
 git clone <your-repo-url>
 cd kisan-plant-doctor
-
+```
 
 ### 2. Install dependencies
-bash
+```bash
 npm install
-
+```
 ### 3. Configure environment variables
-bash
+```bash
 # .env
 API_KEY=YOUR_GEMINI_API_KEY_HERE
-
+```
 ### 4. Start the local dev server
-bash
+```bash
 npm run dev
-
+```
 ### 5. Build for production
-bash
+```bash
 npm run build
 npm run preview
+```
+
 
 ## 🌾 Using AgroCare
 
