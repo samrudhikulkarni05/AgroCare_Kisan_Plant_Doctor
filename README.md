@@ -55,6 +55,42 @@ Farmer-Centric UI — Clean, simple, and distraction-free.
 | Config   | .env                               | Keeps API keys outside the codebase and simplifies environment-specific setups. |
 
 ---
+
+## Project Structure 
+``` bash 
+AgroCare_Greenathon_HED7/
+│── components/                 # Reusable UI components
+│   ├── ChatInput.tsx           # User message input
+│   ├── ChatMessage.tsx         # Display chat bubbles
+│   ├── DiagnosisResult.tsx     # Plant disease output
+│   ├── ExpertFinder.tsx        # Nearby expert locator
+│   ├── Header.tsx              # App top header
+│   ├── InputSection.tsx        # Image + text input
+│   ├── LandingPage.tsx         # Clean entry screen
+│   ├── LanguageSelector.tsx    # Language dropdown
+│   ├── ReportCard.tsx          # Summary report card
+│   ├── Sidebar.tsx             # Navigation sidebar
+│
+│── service/
+│   └── geminiService.ts        # Gemini API handler
+│
+│── .gitignore                  # Git ignored files
+│── App.tsx                     # Main app layout
+│── README.md                   # Project documentation
+│── constants.ts                # Static constants
+│── embed.js                    # Agent embed script
+│── index.html                  # App HTML template
+│── index.tsx                   # React entry point
+│── metadata.json               # Agent/app metadata
+│── package-lock.json           # Dependency lockfile
+│── package.json                # Project dependencies
+│── tsconfig.json               # TypeScript settings
+│── types.ts                    # Shared TypeScript types
+│── vite.config.ts              # Vite app config
+
+
+```
+
 Follow these steps to run AgroCare locally.
 ## ⚙️ Local Setup
 
@@ -108,7 +144,15 @@ It demonstrates how AI, when designed to be inclusive and privacy‑aware, can h
 - *Community features*: Add forums or Q&A sections for farmer interactions.
 
 ---
+## 👥 Team Roles & Contributions
+| Member                                                | Role                                                                                                                                                                                       | Responsibilities                                                                                     |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| 🟧 **Samruddhi Kulkarni** <br> `Overall Project Lead` | ![Lead](https://img.shields.io/badge/Lead-Project%20Lead-orange) ![Backend](https://img.shields.io/badge/Backend-blue) ![AI](https://img.shields.io/badge/AI%20Integration-green)          | 🧭 Project Leadership <br> 🔗 Backend Development <br> 🤖 Chatbot Logic <br> 🧠 AI Model Integration |
+| 🟦 **Pramila Chandanshive** <br> `Design Lead`        | ![Design](https://img.shields.io/badge/Design-Lead-pink) ![Frontend](https://img.shields.io/badge/Frontend-blue)                                                                           | 🎨 UI/UX Design <br> 💻 Frontend Development <br> 🖌 Visual & Interface Design                       |
+| 🟪 **Rutuja Raut** <br> `Frontend Developer`          | ![Frontend](https://img.shields.io/badge/Frontend-Developer-purple) ![Research](https://img.shields.io/badge/Research-grey)                                                                | 💻 Frontend Development <br> 🎨 UI/UX Support <br> 🔍 Research & Content Inputs                      |
+| 🟩 **Sakshi Tamshetti** <br> `Chatbot Developer`      | ![Chatbot](https://img.shields.io/badge/Chatbot-Developer-green) ![AI](https://img.shields.io/badge/AI%20Integration-darkgreen) ![Docs](https://img.shields.io/badge/Documentation-yellow) | 🤖 Chatbot Development <br> 🧠 AI Integration <br> 📘 Research <br> 📝 Documentation                 |
 
+---
 
 ## 👥 Team AgroCare
 
@@ -118,5 +162,7 @@ It demonstrates how AI, when designed to be inclusive and privacy‑aware, can h
 | *Sakshi Tamshetti* | https://github.com/SakshiTamshetti                          |
 | *Pramila Chandanshive* | https://github.com/PramilaChandanshive                 |
 | *Samruddhi Kulkarni* | https://github.com/samrudhikulkarni05                     |
+
+
 
 *Built for HED 7.0 – Greenathon: Hack. Build. Sustain.* 🌱
