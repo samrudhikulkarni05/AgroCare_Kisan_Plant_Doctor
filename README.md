@@ -144,14 +144,14 @@ It demonstrates how AI, when designed to be inclusive and privacy‑aware, can h
 - *Community features*: Add forums or Q&A sections for farmer interactions.
 
 ---
-
 ## 👥 Team AgroCare
-| Member                                                                                         | Role                                                                                                                                                                                       | Responsibilities                                                                                     |
-| ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| 🟧 **[Samruddhi Kulkarni](https://github.com/samrudhikulkarni05)** <br> `Overall Project Lead` | ![Lead](https://img.shields.io/badge/Lead-Project%20Lead-orange) ![Backend](https://img.shields.io/badge/Backend-blue) ![AI](https://img.shields.io/badge/AI%20Integration-green)          | 🧭 Project Leadership <br> 🔗 Backend Development <br> 🤖 Chatbot Logic <br> 🧠 AI Model Integration |
-| 🟦 **[Pramila Chandanshive](https://github.com/PramilaChandanshive)** <br> `Design Lead`       | ![Design](https://img.shields.io/badge/Design-Lead-pink) ![Frontend](https://img.shields.io/badge/Frontend-blue)                                                                           | 🎨 UI/UX Design <br> 💻 Frontend Development <br> 🖌 Visual & Interface Design                       |
-| 🟪 **[Rutuja Raut](https://github.com/rutujaraut730)** <br> `Frontend Developer`               | ![Frontend](https://img.shields.io/badge/Frontend-Developer-purple) ![Research](https://img.shields.io/badge/Research-grey)                                                                | 💻 Frontend Development <br> 🎨 UI/UX Support <br> 🔍 Research & Content Inputs                      |
-| 🟩 **[Sakshi Tamshetti](https://github.com/SakshiTamshetti)** <br> `Chatbot Developer`         | ![Chatbot](https://img.shields.io/badge/Chatbot-Developer-green) ![AI](https://img.shields.io/badge/AI%20Integration-darkgreen) ![Docs](https://img.shields.io/badge/Documentation-yellow) | 🤖 Chatbot Development <br> 🧠 AI Integration <br> 📘 Research <br> 📝 Documentation                 |
+
+| Member | Role |
+| ------ | ----- |
+| 🟧 **[Samruddhi Kulkarni](https://github.com/samrudhikulkarni05)** <br> `Overall Project Lead` | ![Lead](https://img.shields.io/badge/Lead-Project%20Lead-orange) ![Backend](https://img.shields.io/badge/Backend-blue) ![AI](https://img.shields.io/badge/AI%20Integration-green) |
+| 🟦 **[Pramila Chandanshive](https://github.com/PramilaChandanshive)** <br> `Design Lead` | ![Design](https://img.shields.io/badge/Design-Lead-pink) ![Frontend](https://img.shields.io/badge/Frontend-blue) |
+| 🟪 **[Rutuja Raut](https://github.com/rutujaraut730)** <br> `Frontend Developer` | ![Frontend](https://img.shields.io/badge/Frontend-Developer-purple) ![Research](https://img.shields.io/badge/Research-grey) |
+| 🟩 **[Sakshi Tamshetti](https://github.com/SakshiTamshetti)** <br> `Chatbot Developer` | ![Chatbot](https://img.shields.io/badge/Chatbot-Developer-green) ![AI](https://img.shields.io/badge/AI%20Integration-darkgreen) ![Docs](https://img.shields.io/badge/Documentation-yellow) |
 
 
 
