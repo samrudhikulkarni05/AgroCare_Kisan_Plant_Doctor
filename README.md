@@ -226,12 +226,8 @@ All previous crop checks and reports are securely stored for future reference.
 ---
 ## Overall Conclusion
 
-AgroCare – Kisan Plant Doctor demonstrates how Artificial Intelligence can be effectively applied to solve real-world agricultural challenges. By combining image-based crop disease detection, user queries, weather insights, and local support, the system provides farmers with timely, accurate, and actionable guidance.
+AgroCare – Kisan Plant Doctor shows how AI can help farmers by detecting crop diseases, answering queries, and providing weather and local support. It is designed for farmers with a simple interface, multiple languages, and secure personalized access. AgroCare can reduce crop losses and grow into a smart digital companion with voice support, mobile access, and market updates. 🌾📱
 
-The project emphasizes a farmer-first approach, offering a simple interface, multi-language support, and secure login-based personalization. AgroCare has the potential to reduce crop losses, improve yield quality, and support sustainable farming practices.
-
-With further enhancements such as voice assistance, mobile deployment, and market insights, AgroCare can evolve into a comprehensive digital companion for farmers, contributing meaningfully to smart agriculture and rural development.
----
 
 Enjoy the full-screen interactive experience! 🌿✨
 
