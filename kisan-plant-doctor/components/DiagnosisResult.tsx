@@ -13,6 +13,8 @@ interface DiagnosisResultProps {
 
 const DiagnosisResult: React.FC<DiagnosisResultProps> = ({ data, onViewReport, isCompact = false }) => {
   const isHealthy = data.disease_name.toLowerCase().includes('healthy');
+  const treatmentSteps = data.treatment_steps || [];
+  const preventionTips = data.prevention_tips || [];
 
   return (
     <div className={`space-y-4 animate-fade-in ${isCompact ? 'w-full' : ''}`}>
@@ -36,7 +38,7 @@ const DiagnosisResult: React.FC<DiagnosisResultProps> = ({ data, onViewReport, i
           {/* Why it caused */}
           <div className="space-y-2">
              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest flex items-center gap-2">
-               <Leaf size={14} className="text-emerald-500" /> Why this happened (Cause)
+               <span className="text-emerald-500"><Leaf size={14} /></span> Why this happened (Cause)
              </p>
              <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100">
                 <p className="text-slate-700 text-sm font-bold leading-relaxed">
@@ -54,7 +56,7 @@ const DiagnosisResult: React.FC<DiagnosisResultProps> = ({ data, onViewReport, i
                    Prescription (Treatment)
                 </h5>
                 <ul className="space-y-2 relative z-10">
-                  {data.treatment_steps.slice(0, 3).map((step, idx) => (
+                  {treatmentSteps.slice(0, 3).map((step, idx) => (
                     <li key={idx} className="flex gap-2 text-xs font-bold text-emerald-50">
                        <span className="opacity-50">•</span>
                        <span>{step}</span>
@@ -69,7 +71,7 @@ const DiagnosisResult: React.FC<DiagnosisResultProps> = ({ data, onViewReport, i
                    <ShieldCheck size={12} className="text-emerald-600" /> Prevention Strategy
                 </h5>
                 <ul className="space-y-2">
-                  {data.prevention_tips.slice(0, 2).map((tip, idx) => (
+                  {preventionTips.slice(0, 2).map((tip, idx) => (
                     <li key={idx} className="flex gap-2 text-xs font-bold text-slate-700">
                        <span className="text-emerald-500">•</span>
                        <span>{tip}</span>

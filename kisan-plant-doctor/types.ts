@@ -5,7 +5,8 @@ export enum AppView {
   HISTORY = 'HISTORY',
   WEATHER = 'WEATHER',
   ADMIN = 'ADMIN',
-  DOCS = 'DOCS'
+  DOCS = 'DOCS',
+  LOCAL_HELP = 'LOCAL_HELP'
 }
 
 export interface Language {

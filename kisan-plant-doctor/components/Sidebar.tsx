@@ -4,7 +4,7 @@ import {
   X, MapPin, Home, Globe, Clock, CloudSun, 
   ChevronRight, Leaf, 
   BookOpen, Heart, User as UserIcon,
-  Camera, Database, LogOut, LogIn, ShieldAlert, FileText
+  Camera, Database, LogOut, LogIn, ShieldAlert, FileText, LifeBuoy
 } from 'lucide-react';
 import { User } from '../types';
 
@@ -125,7 +125,15 @@ const Sidebar: React.FC<SidebarProps> = ({
             <ChevronRight size={18} className="opacity-30 group-hover:opacity-100 transition-all" />
           </button>
 
-          <button onClick={() => { onShowWeather(); onClose(); }} className="menu-item-animate delay-3 w-full flex items-center justify-between p-4 rounded-2xl text-[#064e3b] hover:bg-emerald-50 transition-all group">
+          <button onClick={() => { onFindExperts(); onClose(); }} className="menu-item-animate delay-3 w-full flex items-center justify-between p-4 rounded-2xl text-[#064e3b] hover:bg-emerald-50 transition-all group">
+            <div className="flex items-center gap-4">
+              <div className="p-3 bg-white rounded-2xl shadow-sm border border-slate-100 group-hover:bg-[#064e3b] group-hover:text-white transition-all"><LifeBuoy size={22} /></div>
+              <span className="font-black">Local Help</span>
+            </div>
+            <ChevronRight size={18} className="opacity-30 group-hover:opacity-100 transition-all" />
+          </button>
+
+          <button onClick={() => { onShowWeather(); onClose(); }} className="menu-item-animate delay-4 w-full flex items-center justify-between p-4 rounded-2xl text-[#064e3b] hover:bg-emerald-50 transition-all group">
             <div className="flex items-center gap-4">
               <div className="p-3 bg-white rounded-2xl shadow-sm border border-slate-100 group-hover:bg-[#064e3b] group-hover:text-white transition-all"><CloudSun size={22} /></div>
               <span className="font-black">Weather Today</span>
@@ -133,9 +141,8 @@ const Sidebar: React.FC<SidebarProps> = ({
             <ChevronRight size={18} className="opacity-30 group-hover:opacity-100 transition-all" />
           </button>
 
-          {/* Only show "My Old Checks" if logged in */}
           {user && (
-            <button onClick={() => { onShowHistory(); onClose(); }} className="menu-item-animate delay-4 w-full flex items-center justify-between p-4 rounded-2xl text-[#064e3b] hover:bg-emerald-50 transition-all group">
+            <button onClick={() => { onShowHistory(); onClose(); }} className="menu-item-animate delay-5 w-full flex items-center justify-between p-4 rounded-2xl text-[#064e3b] hover:bg-emerald-50 transition-all group">
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-white rounded-2xl shadow-sm border border-slate-100 group-hover:bg-[#064e3b] group-hover:text-white transition-all"><Clock size={22} /></div>
                 <span className="font-black">My Old Checks</span>
@@ -144,7 +151,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             </button>
           )}
 
-          <button onClick={() => { onChangeLanguage(); onClose(); }} className="menu-item-animate delay-5 w-full flex items-center justify-between p-4 rounded-2xl text-[#064e3b] hover:bg-emerald-50 transition-all group">
+          <button onClick={() => { onChangeLanguage(); onClose(); }} className="menu-item-animate delay-6 w-full flex items-center justify-between p-4 rounded-2xl text-[#064e3b] hover:bg-emerald-50 transition-all group">
             <div className="flex items-center gap-4">
               <div className="p-3 bg-white rounded-2xl shadow-sm border border-slate-100 group-hover:bg-[#064e3b] group-hover:text-white transition-all"><Globe size={22} /></div>
               <span className="font-black">Change Language</span>
@@ -152,7 +159,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             <ChevronRight size={18} className="opacity-30 group-hover:opacity-100 transition-all" />
           </button>
 
-          <button onClick={() => { onShowDocs?.(); onClose(); }} className="menu-item-animate delay-6 w-full flex items-center justify-between p-4 rounded-2xl text-[#064e3b] hover:bg-emerald-50 transition-all group">
+          <button onClick={() => { onShowDocs?.(); onClose(); }} className="menu-item-animate delay-7 w-full flex items-center justify-between p-4 rounded-2xl text-[#064e3b] hover:bg-emerald-50 transition-all group">
             <div className="flex items-center gap-4">
               <div className="p-3 bg-white rounded-2xl shadow-sm border border-slate-100 group-hover:bg-[#064e3b] group-hover:text-white transition-all"><FileText size={22} /></div>
               <span className="font-black">Project Brief</span>
@@ -161,7 +168,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           </button>
 
           {isAdmin && (
-            <button onClick={() => { onShowAdmin(); onClose(); }} className="menu-item-animate delay-7 w-full flex items-center justify-between p-4 rounded-2xl text-amber-700 bg-amber-50 border border-amber-100 hover:bg-amber-100 transition-all group">
+            <button onClick={() => { onShowAdmin(); onClose(); }} className="menu-item-animate delay-8 w-full flex items-center justify-between p-4 rounded-2xl text-amber-700 bg-amber-50 border border-amber-100 hover:bg-amber-100 transition-all group">
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-white rounded-2xl shadow-sm border border-amber-100 group-hover:bg-amber-700 group-hover:text-white transition-all"><Database size={22} /></div>
                 <span className="font-black">Admin Panel</span>

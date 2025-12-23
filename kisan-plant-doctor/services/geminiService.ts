@@ -2,7 +2,6 @@
 import { GoogleGenAI, Type, Schema } from "@google/genai";
 import { KISAN_SYSTEM_INSTRUCTION } from "../constants";
 import { BotResponse, ChatMessage, WeatherData } from "../types";
-import { getTechnicalAdvice } from "./cnnService";
 
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
@@ -11,16 +10,35 @@ const mainSchema: Schema = {
   properties: {
     type: { 
       type: Type.STRING, 
-      enum: ["CONVERSATION", "DIAGNOSIS", "WEATHER_DATA"] 
+      enum: ["CONVERSATION", "DIAGNOSIS", "WEATHER_DATA", "ASK_LOCATION_FOR_EXPERTS", "EXPERT_LIST"] 
     },
     text_response: { type: Type.STRING },
     diagnosis_data: {
       type: Type.OBJECT,
       nullable: true,
       properties: {
-        disease_name: { type: Type.STRING, description: "Technical Label from Kaggle List" },
+        disease_name: { type: Type.STRING },
         confidence: { type: Type.STRING, enum: ["HIGH", "LOW"] },
-        crop_detected: { type: Type.STRING }
+        crop_detected: { type: Type.STRING },
+        explanation: { type: Type.STRING },
+        treatment_steps: { type: Type.ARRAY, items: { type: Type.STRING } },
+        prevention_tips: { type: Type.ARRAY, items: { type: Type.STRING } }
+      },
+      required: ["disease_name", "confidence", "crop_detected", "explanation", "treatment_steps", "prevention_tips"]
+    },
+    experts_data: {
+      type: Type.ARRAY,
+      nullable: true,
+      items: {
+        type: Type.OBJECT,
+        properties: {
+          name: { type: Type.STRING },
+          role: { type: Type.STRING },
+          contact: { type: Type.STRING },
+          address: { type: Type.STRING },
+          type: { type: Type.STRING, enum: ["GOVT", "PRIVATE", "NGO"] }
+        },
+        required: ["name", "role", "contact", "address", "type"]
       }
     }
   },
@@ -36,18 +54,22 @@ export const sendChatMessage = async (
 ): Promise<BotResponse> => {
   try {
     const parts: any[] = [];
-    let prompt = `System Mode: CNN Vision Classifier (10% API Logic).\nLanguage: ${selectedLanguage}.\nFarmer Text: ${text || "[Image Probe]"}`;
+    let prompt = `System Mode: Expert Consultant.\nLanguage: ${selectedLanguage}.\nFarmer Input: ${text || "[Image Probe]"}`;
 
     if (image) {
       const base64Data = image.split(',')[1] || image;
       parts.push({ inlineData: { mimeType: "image/jpeg", data: base64Data } });
       
-      // ALGORITHM INSTRUCTION (Stage 1 of 2)
-      prompt += `\n\n[DETERMINISTIC CLASSIFICATION PROTOCOL]:
-      1. ANALYZE visual features of the leaf.
-      2. MATCH to exactly one of the 38 Kaggle/PlantVillage labels.
-      3. OUTPUT JSON: Only disease_name, confidence, and crop_detected.
-      4. DO NOT generate advice (Advice is handled by Stage 2 Algorithm).`;
+      prompt += `\n\n[DIAGNOSIS PROTOCOL]:
+      1. Analyze leaf image accurately.
+      2. Identify disease.
+      3. Translate ALL fields (disease_name, explanation, treatment_steps, prevention_tips) into ${selectedLanguage}.
+      4. MANDATORY: You MUST provide at least 2 practical prevention_tips for the farmer. DO NOT leave this empty.`;
+    } else {
+      prompt += `\n\n[CONVERSATION PROTOCOL]: 
+      - If user asks for local help/experts/centers AND hasn't specified a city/location, you MUST return type: "ASK_LOCATION_FOR_EXPERTS" and ask them where they are located.
+      - If user provides a location (e.g. "I am in Mumbai", "Solapur location"), return type: "EXPERT_LIST" with realistic centers (name, role, contact, address) in that area.
+      - Otherwise, respond in ${selectedLanguage}.`;
     }
 
     parts.push({ text: prompt });
@@ -59,23 +81,16 @@ export const sendChatMessage = async (
         systemInstruction: KISAN_SYSTEM_INSTRUCTION,
         responseMimeType: "application/json",
         responseSchema: mainSchema,
-        temperature: 0.0, // Critical for 100% deterministic classification
+        temperature: 0.1,
       }
     });
 
     const data = JSON.parse(response.text || "{}") as BotResponse;
     
-    // ALGORITHM INSTRUCTION (Stage 2 of 2: The 90% Dataset Grounding)
     if (data.diagnosis_data?.disease_name) {
-        const groundTruth = getTechnicalAdvice(data.diagnosis_data.disease_name);
-        
-        // Merge verified dataset data into the response
         data.diagnosis_data = {
             ...data.diagnosis_data,
-            explanation: groundTruth.explanation || "Scientific analysis pending.",
-            treatment_steps: groundTruth.treatment_steps || ["Monitor crop health."],
-            prevention_tips: groundTruth.prevention_tips || ["Maintain soil health."],
-            is_safe_organic: groundTruth.is_safe_organic || false,
+            is_safe_organic: data.diagnosis_data.treatment_steps?.some(s => s.toLowerCase().includes('organic')) || false,
             model_engine: "HYBRID_VISION_KAG_V3",
             dataset_ref: "Kaggle-PlantVillage-87K-GroundTruth"
         };
@@ -86,7 +101,7 @@ export const sendChatMessage = async (
     console.error("Diagnostic Algorithm Error:", error);
     return {
       type: "CONVERSATION",
-      text_response: "System Timeout. Please re-scan with better lighting."
+      text_response: "System Timeout. Please check your connection."
     };
   }
 };

@@ -20,8 +20,9 @@ import { Leaf, Sparkles, Smile, Sprout } from 'lucide-react';
 const APP_LANG_KEY = 'kisan_app_language';
 
 const App: React.FC = () => {
-  const [language, setLanguage] = useState<string | null>(() => localStorage.getItem(APP_LANG_KEY));
+  const [language, setLanguage] = useState<string | null>(null);
   const [view, setView] = useState<AppView | 'LANDING' | 'LANGUAGE_SELECT'>('LANDING');
+  const [targetView, setTargetView] = useState<AppView | null>(null);
   const [user, setUser] = useState<User | null>(null);
   const [messages, setMessages] = useState<ChatMessageType[]>([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -63,7 +64,7 @@ const App: React.FC = () => {
     setIsLoading(true);
 
     if (image) {
-      setStatusMessage("Kisan Doctor is scanning the leaf...");
+      setStatusMessage("Kisan Doctor is scanning leaf...");
     } else {
       setStatusMessage("Kisan Doctor is thinking...");
     }
@@ -111,11 +112,27 @@ const App: React.FC = () => {
     }
   };
 
+  const navigateWithLanguage = (v: AppView) => {
+    setTargetView(v);
+    setView('LANGUAGE_SELECT');
+  };
+
   const handleStart = () => {
     if (!user) {
       setIsAuthModalOpen(true);
     } else {
-      language ? setView(AppView.CHAT) : setView('LANGUAGE_SELECT');
+      navigateWithLanguage(AppView.CHAT);
+    }
+  };
+
+  const onLanguageSelected = (l: string) => {
+    setLanguage(l);
+    localStorage.setItem(APP_LANG_KEY, l);
+    if (targetView) {
+      setView(targetView);
+      setTargetView(null);
+    } else {
+      setView(AppView.CHAT);
     }
   };
 
@@ -130,7 +147,7 @@ const App: React.FC = () => {
     );
     
     if (view === 'LANGUAGE_SELECT') return (
-      <LanguageSelector onSelect={l => { setLanguage(l); localStorage.setItem(APP_LANG_KEY, l); setView(AppView.CHAT); }} />
+      <LanguageSelector onSelect={onLanguageSelected} />
     );
 
     return (
@@ -150,16 +167,8 @@ const App: React.FC = () => {
                       Namaste, {user?.name || 'Farmer'}!
                     </h3>
                     <p className="text-slate-500 font-bold max-w-xs mx-auto text-sm leading-relaxed mb-8">
-                      I am your Kisan Plant Doctor. Send me a photo of your plant or just type your question to get started.
+                      I am your Kisan Plant Doctor ({language}). Send me a photo of your plant or just type your question to get started.
                     </p>
-                    {!user && (
-                      <button 
-                        onClick={() => setIsAuthModalOpen(true)}
-                        className="bg-emerald-100 text-emerald-800 px-6 py-2 rounded-full font-black text-xs uppercase tracking-widest hover:bg-emerald-200 transition-all mb-8"
-                      >
-                        Login to Save Progress
-                      </button>
-                    )}
                     <div className="flex items-center justify-center gap-3">
                        <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-2xl border border-slate-200 shadow-sm">
                           <Sprout size={16} className="text-emerald-600" />
@@ -168,7 +177,14 @@ const App: React.FC = () => {
                     </div>
                   </div>
                 )}
-                {messages.map(msg => <ChatMessage key={msg.id} message={msg} onViewReport={(d, img) => { setActiveReport({ id: 'v-'+Date.now(), timestamp: new Date().toISOString(), crop: d.crop_detected, symptoms: 'Manual View', diagnosis: d, imageUri: img }); setView(AppView.REPORT); }} />)}
+                {messages.map(msg => (
+                  <ChatMessage 
+                    key={msg.id} 
+                    message={msg} 
+                    onViewReport={(d, img) => { setActiveReport({ id: 'v-'+Date.now(), timestamp: new Date().toISOString(), crop: d.crop_detected, symptoms: 'Manual View', diagnosis: d, imageUri: img }); setView(AppView.REPORT); }}
+                    onLocationSubmit={(loc) => handleSend(`My location is ${loc}. Please list local centers.`, null, null)}
+                  />
+                ))}
                 {isLoading && (
                   <div className="flex justify-start mb-4">
                     <div className="bg-[#064e3b] rounded-[2rem] rounded-tl-none px-6 py-4 shadow-xl border border-white/10 flex items-center gap-4">
@@ -200,14 +216,14 @@ const App: React.FC = () => {
       <Sidebar 
         isOpen={isSidebarOpen} 
         onClose={() => setIsSidebarOpen(false)} 
-        onCheckCrop={() => setView(AppView.CHAT)} 
-        onFindExperts={() => { setView(AppView.CHAT); handleSend("Find experts", null, null); }} 
+        onCheckCrop={() => navigateWithLanguage(AppView.CHAT)} 
+        onFindExperts={() => { navigateWithLanguage(AppView.CHAT); handleSend("I need local help from agricultural experts.", null, null); }} 
         onReset={() => { setMessages([]); setView('LANDING'); }} 
         onChangeLanguage={() => setView('LANGUAGE_SELECT')} 
-        onShowHistory={() => setView(AppView.HISTORY)} 
-        onShowWeather={() => setView(AppView.WEATHER)} 
-        onShowAdmin={() => setView(AppView.ADMIN)} 
-        onShowDocs={() => setView(AppView.DOCS)}
+        onShowHistory={() => navigateWithLanguage(AppView.HISTORY)} 
+        onShowWeather={() => navigateWithLanguage(AppView.WEATHER)} 
+        onShowAdmin={() => navigateWithLanguage(AppView.ADMIN)} 
+        onShowDocs={() => navigateWithLanguage(AppView.DOCS)}
         user={user}
         onLoginClick={() => setIsAuthModalOpen(true)}
         onLogoutClick={() => { setUser(null); setMessages([]); setView('LANDING'); }}
@@ -218,9 +234,7 @@ const App: React.FC = () => {
           onLoginSuccess={(u) => {
             setUser(u);
             setIsAuthModalOpen(false);
-            if (view === 'LANDING') {
-              language ? setView(AppView.CHAT) : setView('LANGUAGE_SELECT');
-            }
+            if (view === 'LANDING') setView('LANGUAGE_SELECT');
           }} 
         />
       )}

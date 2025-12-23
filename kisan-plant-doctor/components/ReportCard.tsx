@@ -10,6 +10,8 @@ interface ReportCardProps {
 
 const ReportCard: React.FC<ReportCardProps> = ({ report, onBack }) => {
   const isHealthy = report.diagnosis.disease_name.toLowerCase().includes('healthy');
+  const treatmentSteps = report.diagnosis.treatment_steps || [];
+  const preventionTips = report.diagnosis.prevention_tips || [];
 
   return (
     <div className="space-y-6 pb-12 max-w-2xl mx-auto animate-fade-in px-2">
@@ -68,7 +70,7 @@ const ReportCard: React.FC<ReportCardProps> = ({ report, onBack }) => {
             {/* Why it caused */}
             <section className="space-y-3">
               <h3 className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest">
-                <Leaf size={14} className="text-emerald-500" /> Why this happened (Cause)
+                <span className="text-emerald-500"><Leaf size={14} /></span> Why this happened (Cause)
               </h3>
               <div className="bg-slate-50 p-6 rounded-[2rem] border border-slate-100">
                 <p className="text-slate-700 font-bold leading-relaxed">
@@ -80,11 +82,11 @@ const ReportCard: React.FC<ReportCardProps> = ({ report, onBack }) => {
             {/* Prescription */}
             <section className="space-y-3">
               <h3 className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest">
-                <Zap size={14} className="text-amber-500" /> Prescription (Treatment)
+                <span className="text-amber-500"><Zap size={14} /></span> Prescription (Treatment)
               </h3>
               <div className="bg-[#064e3b] p-8 rounded-[2rem] text-white shadow-xl">
                 <ul className="space-y-4">
-                  {report.diagnosis.treatment_steps.map((step, i) => (
+                  {treatmentSteps.map((step, i) => (
                     <li key={i} className="flex gap-4 items-start">
                       <span className="flex-shrink-0 w-6 h-6 bg-white/10 rounded-lg flex items-center justify-center text-[10px] font-black border border-white/20">{i+1}</span>
                       <span className="text-sm font-bold text-emerald-50">{step}</span>
@@ -97,11 +99,11 @@ const ReportCard: React.FC<ReportCardProps> = ({ report, onBack }) => {
             {/* Prevention Strategy */}
             <section className="space-y-3">
               <h3 className="flex items-center gap-2 text-[10px] font-black text-slate-400 uppercase tracking-widest">
-                <ShieldCheck size={14} className="text-emerald-600" /> Prevention Strategy
+                <span className="text-emerald-600"><ShieldCheck size={14} /></span> Prevention Strategy
               </h3>
               <div className="bg-emerald-50 p-8 rounded-[2rem] border-2 border-emerald-100/50">
                 <ul className="space-y-4">
-                  {report.diagnosis.prevention_tips.map((tip, i) => (
+                  {preventionTips.map((tip, i) => (
                     <li key={i} className="flex gap-4 items-start">
                       <div className="w-1.5 h-1.5 bg-emerald-600 rounded-full mt-1.5 flex-shrink-0"></div>
                       <span className="text-sm font-bold text-slate-800">{tip}</span>

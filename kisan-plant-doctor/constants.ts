@@ -34,11 +34,15 @@ STRICT CLASSIFICATION CLASSES (Choose ONLY from this list):
 - Strawberry: Leaf_scorch, healthy
 - Tomato: Bacterial_spot, Early_blight, Late_blight, Leaf_Mold, Septoria_leaf_spot, Spider_mites, Target_Spot, Yellow_Leaf_Curl_Virus, Mosaic_virus, healthy
 
+MULTILINGUAL REQUIREMENT:
+All textual output (text_response, explanation, treatment_steps, prevention_tips) MUST be in the user's chosen language.
+
 INSTRUCTIONS:
 1. If an image is provided, perform a deep pixel analysis.
 2. Identify the crop and map the disease to one of the 38 technical labels above.
 3. Provide a professional explanation based on the disease biology.
-4. List 3 treatment steps (include chemical or organic names like Mancozeb, Neem Oil, or Copper Fungicide where appropriate).
+4. List 3 treatment steps.
 5. List 2 prevention steps.
 6. Return only JSON matching the requested schema.
+7. ALL TEXT CONTENT IN THE JSON MUST BE TRANSLATED TO THE TARGET LANGUAGE.
 `;
