@@ -26,9 +26,6 @@ The system aligns with the HED 7.0 – Greenathon (Hack. Build. Sustain.) theme 
 
 ---
 
-### Detailed Report
-https://github.com/samrudhikulkarni05/AgroCare_Greenathon_HED7/blob/main/AgroCare.pdf
-
 ### Key Features
 
 Instant Disease Detection — Upload a photo or type symptoms and get quick diagnosis.
