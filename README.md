@@ -213,19 +213,14 @@ All previous crop checks and reports are securely stored for future reference.
 👨‍💼 Government & NGO Integration – Direct access to schemes and advisories.
 
 ---
-## 👥 Team AgroCare
-
-
 ## 👥 Team Members
 
-## 👥 Team Members
-
-| Name | Role | Badge | Profiles |
-|------|------|-------|----------|
-| **Samruddhi Kulkarni** | AI & Backend | ![AI](https://img.shields.io/badge/AI%20%26%20Backend-2E7D32?style=flat&logo=google&logoColor=white) | [LinkedIn](https://www.linkedin.com/in/samrudhi-kulkarni-b85991251) · [GitHub](https://github.com/samrudhikulkarni05) |
-| **Pramila Chandanshive** | UI/UX & Frontend | ![UI/UX](https://img.shields.io/badge/UI%2FUX%20%26%20Frontend-388E3C?style=flat&logo=figma&logoColor=white) | [LinkedIn](https://www.linkedin.com/in/pramila-c-ab3103256) · [GitHub](https://github.com/PramilaChandanshive) |
-| **Rutuja Raut** | Frontend & Research | ![Research](https://img.shields.io/badge/Frontend%20%26%20Research-689F38?style=flat&logo=react&logoColor=white) | [LinkedIn](https://www.linkedin.com/in/rutuja-raut-7926a7256/) · [GitHub](https://github.com/rutujaraut730) |
-| **Sakshi Tamshetti** | Chatbot & Documentation | ![Chatbot](https://img.shields.io/badge/Chatbot%20%26%20Docs-558B2F?style=flat&logo=chatbot&logoColor=white) | [LinkedIn](https://in.linkedin.com/in/sakshi-t-311123256) · [GitHub](https://github.com/SakshiTamshetti) |
+| 👤 Name & Profiles | 🏷️ Role |
+|-------------------|---------|
+| **🌿 Samruddhi Kulkarni**  <br> 🔗 [LinkedIn](https://www.linkedin.com/in/samrudhi-kulkarni-b85991251) · 💻 [GitHub](https://github.com/samrudhikulkarni05) | ![AI & Backend](https://img.shields.io/badge/AI%20%26%20Backend-1E88E5?style=flat&logo=google&logoColor=white) |
+| **🎨 Pramila Chandanshive**  <br> 🔗 [LinkedIn](https://www.linkedin.com/in/pramila-c-ab3103256) · 💻 [GitHub](https://github.com/PramilaChandanshive) | ![UI%2FUX%20%26%20Frontend](https://img.shields.io/badge/UI%2FUX%20%26%20Frontend-8E24AA?style=flat&logo=figma&logoColor=white) |
+| **⚛️ Rutuja Raut**  <br> 🔗 [LinkedIn](https://www.linkedin.com/in/rutuja-raut-7926a7256/) · 💻 [GitHub](https://github.com/rutujaraut730) | ![Frontend%20%26%20Research](https://img.shields.io/badge/Frontend%20%26%20Research-F4511E?style=flat&logo=react&logoColor=white) |
+| **🤖 Sakshi Tamshetti**  <br> 🔗 [LinkedIn](https://in.linkedin.com/in/sakshi-t-311123256) · 💻 [GitHub](https://github.com/SakshiTamshetti) | ![Chatbot%20%26%20Documentation](https://img.shields.io/badge/Chatbot%20%26%20Documentation-00897B?style=flat&logo=chatbot&logoColor=white) |
 
 
 ---
