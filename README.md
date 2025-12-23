@@ -19,17 +19,9 @@ KisanDoctor is an AI-powered crop health diagnosis platform designed to support 
 
 ---
 
-🚀 Project Overview
-
-Agriculture is the backbone of India, yet crop diseases often lead to major yield losses. KisanDoctor bridges the gap between technology and farming by using Artificial Intelligence and Computer Vision to identify crop diseases early and accurately.
-
-📸 Upload a crop image → 🤖 AI analyzes it → 🌾 Get disease details & cure
-
----
-
 ### AgroCare – Kisan Plant Doctor
 
-🌾 AgroCare – Kisan Plant Doctor
+
 AI-Powered Crop Health & Disease Detection System
 
 AgroCare – Kisan Plant Doctor is a smart agriculture support platform designed to help farmers identify crop diseases early and take timely action. By using Artificial Intelligence, Computer Vision, and real-time data, AgroCare provides accurate crop health analysis, treatment suggestions, and farming assistance in a simple and farmer-friendly way.idth rural usage.
@@ -39,7 +31,6 @@ AgroCare – Kisan Plant Doctor is a smart agriculture support platform designed
 
 ### Key Features
 
-🔍 Features
 
 📸 Photo-based Crop Health Check
 
@@ -52,6 +43,7 @@ AgroCare – Kisan Plant Doctor is a smart agriculture support platform designed
 🤖 AI-powered Image Analysis
 
 📱 Farmer-friendly & Easy to Use Interface
+
 ---
 
 ###🧭 Project Dashboard (Main Modules)
@@ -67,6 +59,7 @@ AgroCare – Kisan Plant Doctor is a smart agriculture support platform designed
 🌐 Change Language – Easy language switching
 
 📘 Project Brief – Project goals, working & impact
+
 ---
 
 ## 🛠 Tech Stack
