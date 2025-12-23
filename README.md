@@ -216,12 +216,16 @@ All previous crop checks and reports are securely stored for future reference.
 ## 👥 Team AgroCare
 
 
-| Name | Role | Email | LinkedIn | GitHub |
-|------|------|-------|----------|--------|
-| **Samruddhi Kulkarni** | AI & Backend | samrudhi.kulkarni05@gmail.com | [LinkedIn](https://www.linkedin.com/in/samrudhi-kulkarni-b85991251) | [GitHub](https://github.com/samrudhikulkarni05) |
-| **Pramila Chandanshive** | UI/UX & Frontend | pramilachandanshiv1@gmail.com | [LinkedIn](https://www.linkedin.com/in/pramila-c-ab3103256) | [GitHub](https://github.com/PramilaChandanshive) |
-| **Rutuja Raut** | Frontend & Research | rutujatk30@gmail.com | [LinkedIn](https://www.linkedin.com/in/rutuja-raut-7926a7256/) | [GitHub](https://github.com/rutujaraut730) |
-| **Sakshi Tamshetti** | Chatbot & Documentation | sakshitamshetti@gmail.com | [LinkedIn](https://in.linkedin.com/in/sakshi-t-311123256) | [GitHub](https://github.com/SakshiTamshetti) |
+## 👥 Team Members
+
+## 👥 Team Members
+
+| Name | Role | Badge | Profiles |
+|------|------|-------|----------|
+| **Samruddhi Kulkarni** | AI & Backend | ![AI](https://img.shields.io/badge/AI%20%26%20Backend-2E7D32?style=flat&logo=google&logoColor=white) | [LinkedIn](https://www.linkedin.com/in/samrudhi-kulkarni-b85991251) · [GitHub](https://github.com/samrudhikulkarni05) |
+| **Pramila Chandanshive** | UI/UX & Frontend | ![UI/UX](https://img.shields.io/badge/UI%2FUX%20%26%20Frontend-388E3C?style=flat&logo=figma&logoColor=white) | [LinkedIn](https://www.linkedin.com/in/pramila-c-ab3103256) · [GitHub](https://github.com/PramilaChandanshive) |
+| **Rutuja Raut** | Frontend & Research | ![Research](https://img.shields.io/badge/Frontend%20%26%20Research-689F38?style=flat&logo=react&logoColor=white) | [LinkedIn](https://www.linkedin.com/in/rutuja-raut-7926a7256/) · [GitHub](https://github.com/rutujaraut730) |
+| **Sakshi Tamshetti** | Chatbot & Documentation | ![Chatbot](https://img.shields.io/badge/Chatbot%20%26%20Docs-558B2F?style=flat&logo=chatbot&logoColor=white) | [LinkedIn](https://in.linkedin.com/in/sakshi-t-311123256) · [GitHub](https://github.com/SakshiTamshetti) |
 
 
 ---
