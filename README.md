@@ -215,12 +215,13 @@ All previous crop checks and reports are securely stored for future reference.
 ---
 ## 👥 Team AgroCare
 
-| Member | Role |
-| ------ | ----- |
-| 🟧 **[Samruddhi Kulkarni](https://github.com/samrudhikulkarni05)** <br> `Overall Project Lead` | ![Lead](https://img.shields.io/badge/Lead-Project%20Lead-orange) ![Backend](https://img.shields.io/badge/Backend-blue) ![AI](https://img.shields.io/badge/AI%20Integration-green) |
-| 🟦 **[Pramila Chandanshive](https://github.com/PramilaChandanshive)** <br> `Design Lead` | ![Design](https://img.shields.io/badge/Design-Lead-pink) ![Frontend](https://img.shields.io/badge/Frontend-blue) |
-| 🟪 **[Rutuja Raut](https://github.com/rutujaraut730)** <br> `Frontend Developer` | ![Frontend](https://img.shields.io/badge/Frontend-Developer-purple) ![Research](https://img.shields.io/badge/Research-grey) |
-| 🟩 **[Sakshi Tamshetti](https://github.com/SakshiTamshetti)** <br> `Chatbot Developer` | ![Chatbot](https://img.shields.io/badge/Chatbot-Developer-green) ![AI](https://img.shields.io/badge/AI%20Integration-darkgreen) ![Docs](https://img.shields.io/badge/Documentation-yellow) |
+
+| Name | Role | Email | LinkedIn | GitHub |
+|------|------|-------|----------|--------|
+| **Samruddhi Kulkarni** | AI & Backend | samrudhi.kulkarni05@gmail.com | [LinkedIn](https://www.linkedin.com/in/samrudhi-kulkarni-b85991251) | [GitHub](https://github.com/samrudhikulkarni05) |
+| **Pramila Chandanshive** | UI/UX & Frontend | pramilachandanshiv1@gmail.com | [LinkedIn](https://www.linkedin.com/in/pramila-c-ab3103256) | [GitHub](https://github.com/PramilaChandanshive) |
+| **Rutuja Raut** | Frontend & Research | rutujatk30@gmail.com | [LinkedIn](https://www.linkedin.com/in/rutuja-raut-7926a7256/) | [GitHub](https://github.com/rutujaraut730) |
+| **Sakshi Tamshetti** | Chatbot & Documentation | sakshitamshetti@gmail.com | [LinkedIn](https://in.linkedin.com/in/sakshi-t-311123256) | [GitHub](https://github.com/SakshiTamshetti) |
 
 
 ---
