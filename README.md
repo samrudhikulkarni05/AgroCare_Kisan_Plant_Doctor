@@ -227,6 +227,26 @@ All previous crop checks and reports are securely stored for future reference.
 ## Overall Conclusion
 
 AgroCare – Kisan Plant Doctor shows how AI can help farmers by detecting crop diseases, answering queries, and providing weather and local support. It is designed for farmers with a simple interface, multiple languages, and secure personalized access. AgroCare can reduce crop losses and grow into a smart digital companion with voice support, mobile access, and market updates. 🌾📱
+---
+## 🚀 Live Demo & AI Studio App
+
+<p align="center">
+  <a href="https://ai.studio/apps/drive/1BV03G7_e7-tnd-1wlRxgk5qvmR3-9TrE">
+    <img src="https://img.shields.io/badge/Google%20AI%20Studio-Live%20Demo-4285F4?style=for-the-badge&logo=google&logoColor=white" />
+  </a>
+  <br><br>
+  <img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="60" alt="loading"/>
+</p>
+
+<p align="center">
+  ⚡ Click the badge above to open the AI Studio project
+</p>
+
+🔗 **AI Studio App Link**  
+👉 **[Open AI Studio Project](https://ai.studio/apps/drive/1BV03G7_e7-tnd-1wlRxgk5qvmR3-9TrE)**
+
+> ⚠️ **Note:** Please log in with the correct Google account to access the project.
+---
 
 Enjoy the full-screen interactive experience! 🌿✨
 
