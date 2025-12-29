@@ -27,8 +27,12 @@ AI-Powered Crop Health & Disease Detection System
 AgroCare – Kisan Plant Doctor is a smart agriculture support platform designed to help farmers identify crop diseases early and take timely action. By using Artificial Intelligence, Computer Vision, and real-time data, AgroCare provides accurate crop health analysis, treatment suggestions, and farming assistance in a simple and farmer-friendly way.idth rural usage.
 
 
-# Detailed Project Explanation 
+### Detailed Project Explanation 
 https://youtu.be/75P0hOuRefk
+
+### Quick Project Explanation 
+https://youtu.be/G7xnaKHdG4Y?si=InwT1EHmx4CC8b30
+
 ---
 
 ### Key Features
