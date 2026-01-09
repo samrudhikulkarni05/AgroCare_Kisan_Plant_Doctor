@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd Agrocare/kisan-plant-doctor && npm run build",
+  "installCommand": "cd Agrocare/kisan-plant-doctor && npm install",
+  "outputDirectory": "Agrocare/kisan-plant-doctor/dist"
+}
