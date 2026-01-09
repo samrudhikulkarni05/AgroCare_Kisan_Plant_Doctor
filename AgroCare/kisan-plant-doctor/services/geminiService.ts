@@ -61,10 +61,10 @@ export const sendChatMessage = async (
       parts.push({ inlineData: { mimeType: "image/jpeg", data: base64Data } });
       
       prompt += `\n\n[DIAGNOSIS PROTOCOL]:
-      1. Analyze leaf image accurately for the 38 technical classes.
-      2. Identify disease.
+      1. Identify the exact plant species and analyze strictly for any pathologies (disease, pests, deficiency).
+      2. If the plant is healthy, state "Healthy [Plant Name]".
       3. Translate ALL fields (disease_name, explanation, treatment_steps, prevention_tips) into ${selectedLanguage}.
-      4. MANDATORY: You MUST provide at least 2 practical prevention_tips for the farmer. DO NOT leave the prevention_tips array empty. If the plant is healthy, provide maintenance tips.`;
+      4. MANDATORY: You MUST provide at least 2 practical prevention_tips for the farmer. DO NOT leave the prevention_tips array empty.`;
     } else {
       prompt += `\n\n[CONVERSATION PROTOCOL]: 
       - If user asks for local help/experts/centers AND hasn't specified a city/location, you MUST return type: "ASK_LOCATION_FOR_EXPERTS" and ask them where they are located in ${selectedLanguage}.
@@ -81,7 +81,7 @@ export const sendChatMessage = async (
         systemInstruction: KISAN_SYSTEM_INSTRUCTION,
         responseMimeType: "application/json",
         responseSchema: mainSchema,
-        temperature: 0.1,
+        temperature: 0.2, // Slightly increased for creative analysis of unknown plants
       }
     });
 
@@ -90,16 +90,16 @@ export const sendChatMessage = async (
     if (data.diagnosis_data?.disease_name) {
         data.diagnosis_data = {
             ...data.diagnosis_data,
-            is_safe_organic: data.diagnosis_data.treatment_steps?.some(s => s.toLowerCase().includes('organic')) || false,
-            model_engine: "HYBRID_VISION_KAG_V3",
-            dataset_ref: "Kaggle-PlantVillage-87K-GroundTruth"
+            is_safe_organic: data.diagnosis_data.treatment_steps?.some(s => s.toLowerCase().includes('organic') || s.toLowerCase().includes('neem')) || false,
+            model_engine: "GEMINI_VISION", // Updated to reflect general vision capability
+            dataset_ref: "Global-Agri-Database-Live"
         };
         
         // Final fallback to ensure non-empty tips if AI hallucinated an empty array
         if (!data.diagnosis_data.prevention_tips || data.diagnosis_data.prevention_tips.length === 0) {
             data.diagnosis_data.prevention_tips = [
-                "Always use clean tools and certified disease-free seeds.",
-                "Maintain proper spacing and improve field drainage."
+                "Use clean, certified seeds and tools.",
+                "Maintain proper field hygiene and drainage."
             ];
         }
     }
