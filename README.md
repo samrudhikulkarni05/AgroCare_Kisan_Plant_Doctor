@@ -177,23 +177,14 @@ All previous crop checks and reports are securely stored for future reference.
 
 
 🌱 Early Disease Detection – Identifies crop diseases at an early stage, reducing yield loss.
-
 🤖 AI-Powered Accuracy – Uses image analysis and user queries for more accurate diagnosis.
-
 ⏱️ Time-Saving – Farmers get instant results without waiting for experts.
-
 💰 Cost-Effective – Reduces unnecessary spending on incorrect fertilizers and pesticides.
-
 🌦️ Weather-Aware Decisions – Helps farmers plan activities using real-time weather data.
-
 🧑‍🌾 Easy to Use – Simple, farmer-friendly interface requiring minimal technical knowledge.
-
 🌐 Multi-Language Support – Accessible to farmers in their local language.
-
 🔐 Secure & Personalized – Login-based system keeps farmer data safe and personalized.
-
 📊 History Tracking – Previous crop reports can be reviewed anytime.
-
 🌍 Scalable Solution – Can be expanded to more crops, regions, and features.
 
 ---
@@ -201,21 +192,13 @@ All previous crop checks and reports are securely stored for future reference.
 ## 🌱 Future Scope
 
 🎙️ Voice-Based Assistant – Farmers can speak queries instead of typing.
-
 📱 Mobile App Version – Android/iOS app for wider farmer reach.
-
 🌾 Crop Recommendation System – Suggest best crops based on soil & weather.
-
 💊 Fertilizer & Pesticide Guidance – Smart recommendations with dosage control.
-
 📈 Market Price Prediction – Predict crop prices to help farmers plan selling.
-
 🛰️ Satellite & IoT Integration – Advanced monitoring of crop health and soil.
-
 🌍 Offline Mode Support – Basic features available without internet.
-
 🗣️ More Regional Languages – Support for additional Indian languages.
-
 👨‍💼 Government & NGO Integration – Direct access to schemes and advisories.
 
 ---
@@ -228,11 +211,6 @@ All previous crop checks and reports are securely stored for future reference.
 | **⚛️ Rutuja Raut**  <br> 🔗 [LinkedIn](https://www.linkedin.com/in/rutuja-raut-7926a7256/) · 💻 [GitHub](https://github.com/rutujaraut730) | ![Frontend%20%26%20Research](https://img.shields.io/badge/Frontend%20%26%20Research-F4511E?style=flat&logo=react&logoColor=white) |
 | **🤖 Sakshi Tamshetti**  <br> 🔗 [LinkedIn](https://in.linkedin.com/in/sakshi-t-311123256) · 💻 [GitHub](https://github.com/SakshiTamshetti) | ![Chatbot%20%26%20Documentation](https://img.shields.io/badge/Chatbot%20%26%20Documentation-00897B?style=flat&logo=chatbot&logoColor=white) |
 
-
----
-## Overall Conclusion
-
-AgroCare – Kisan Plant Doctor shows how AI can help farmers by detecting crop diseases, answering queries, and providing weather and local support. It is designed for farmers with a simple interface, multiple languages, and secure personalized access. AgroCare can reduce crop losses and grow into a smart digital companion with voice support, mobile access, and market updates. 🌾📱
 ---
 ## 🚀 Live Demo & AI Studio App
 
@@ -253,6 +231,10 @@ AgroCare – Kisan Plant Doctor shows how AI can help farmers by detecting crop 
 
 > ⚠️ **Note:** Please log in with the correct Google account to access the project.
 ---
+
+## Conclusion
+
+AgroCare – Kisan Plant Doctor is an AI-powered farming assistant that helps farmers detect crop diseases, ask questions, and get weather-aware, local guidance through a simple, multilingual, and secure interface. It aims to cut crop losses today and evolve into a smart digital companion with voice support, mobile access, and real-time market and advisory updates.
 
 Enjoy the full-screen interactive experience! 🌿✨
 
